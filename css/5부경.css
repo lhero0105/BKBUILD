@@ -1,0 +1,679 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  color: #fff;
+}
+
+.main {
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+/* 
+###################
+-------- header-nav
+################### */
+header {
+  max-width: 100%;
+}
+
+header .nav {
+  max-width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+}
+
+header .nav .nav-wrap {
+  max-width: 1800px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .nav .nav-wrap img{
+  cursor: pointer;
+  z-index: 1;
+}
+header .nav .nav-wrap .menu {
+  height: 100%;
+  flex-basis: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+header .nav .nav-wrap .menu ul {
+  display: flex;
+  flex-basis: 90%;
+  justify-content: space-around;
+  align-items: center;
+}
+header .nav .nav-wrap .menu ul li a {
+  color: #fff;
+  font-size: 18px;
+}
+
+header .blank {
+  width: 1903px;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* z-index: 80; */
+}
+header .blank .showbox {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 0px;
+  background-color: #424242;
+  transition: 0.5s;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  flex-shrink: 0.5;
+  
+}
+
+header .blank .showbox .showbox-wrap {
+  height: 100%;
+  width: 100%;
+  flex-basis: 47.82%;
+  display: flex;
+  /* justify-content: center; */
+}
+
+header .blank .showbox .showbox-wrap .submenu {
+  /* flex-basis: 80%; */
+  display: flex;
+  height: 0;
+  width: 100%;
+  margin-left: 80px;
+  margin-right: 68px;
+
+  
+}
+
+header .blank .showbox .showbox-wrap .submenu ul {
+  /* z-index: 1; */
+  width: 100%;
+  margin-top: 200px;
+  flex-direction: column;
+  /* font-size: 10px;
+    display: block; */
+}
+
+header .blank .showbox .showbox-wrap .submenu ul li {
+  padding: 10px 0;
+  /* display: block;
+  font-size: 10px; */
+  text-align: center;
+  /* box-sizing: border-box; */
+  color: #d8d8d8;
+}
+
+header .blank .showbox .showbox-wrap .submenu ul li a {
+  opacity: 0.5;
+  font-size: 16px;
+  display: block;
+}
+
+header .nav .nav-wrap .menu ul li {
+  z-index: 1;
+}
+header .nav .nav-wrap .menu ul:hover > .blank .showbox {
+  height: 300px;
+}
+
+/* 
+###################
+--------- checkbox
+################### */
+
+header .nav + input {
+  display: none;
+}
+
+header label {
+  /* display: flex; */
+  position: relative;
+  z-index: 1;
+}
+
+header label .btn-box {
+  cursor: pointer;
+  top: 65px;
+  right: 70px;
+  position: absolute;
+  position: fixed;
+}
+
+header #btn:checked~.blank .showbox {
+  height: 300px;
+}
+
+header #btn:checked+input .btn-box {
+  background-color: #6d6d6d;
+}
+
+/* 
+###################
+###################
+------- main1-inner
+###################
+################### */
+.main1 {
+  max-width: 100%;
+  height: 100vh;
+  background-image: url("../images/1.jpg");
+  background-size: cover;
+}
+
+.main1 .main1-inner {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 250px 0;
+  margin: 0 300px;
+  display: block;
+}
+
+.main1 .main1-inner strong {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 60px;
+  width: 100%;
+  display: block;
+  padding-bottom: 20px;
+  /* 반응형 media이용 */
+}
+
+.main1 .main1-inner em {
+  font-size: 18px;
+  padding-left: 70px;
+  text-align: left;
+  display: block;
+  position: relative;
+}
+
+.main1 .main1-inner .box1 {
+  width: 1200px;
+  height: 90px;
+  display: block;
+  cursor: pointer;
+}
+
+.main1 .main1-inner .box1 a {
+  width: 238px;
+  height: 45px;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #fff;
+  display: block;
+  text-align: center;
+  line-height: 45px;
+  margin-top: 50px;
+  margin-left: 70px;
+}
+
+.main1-inner em::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  border-top: 1px solid white;
+}
+
+.main1 .main1-inner .box1 a:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
+}
+
+.main1-inner .banner {
+  width: 620px;
+  height: 70px;
+  margin-top: 150px;
+}
+
+.main1-inner .banner ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.main1-inner .banner ul li {
+  cursor: pointer;
+  display: block;
+  height: 60px;
+  position: relative;
+}
+
+.main1-inner .banner ul li dt {
+  display: block;
+  font-size: 18px;
+  color: #e0e0e0;
+  position: relative;
+}
+
+.main1-inner .banner ul li dd {
+  display: block;
+  font-size: 15px;
+  color: #a5a5a5;
+}
+
+.main1-inner .banner ul .aa::before {
+  content: "";
+  background-image: url("../images/건설사업란\ 이미지.png");
+  width: 50px;
+  height: 43px;
+  top: 0px;
+  left: 200px;
+  position: absolute;
+  transition: 0.5s;
+  filter: saturate(2);
+}
+
+.main1-inner .banner ul .bb::before {
+  content: "";
+  background-image: url("../images/건축영상란\ 이미지.png");
+  width: 35px;
+  height: 43px;
+  top: 0px;
+  left: 220px;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.main1-inner .banner ul li dd::before {
+  content: "";
+  height: 70px;
+  width: 250px;
+  top: -10px;
+  border-bottom: 3px solid #ffffff;
+  opacity: 0.5;
+  position: absolute;
+  transition: 0.5s;
+}
+
+/* 밝은 그림 찾기 */
+.main1-inner .banner ul li:hover dd::before {
+  opacity: 1;
+}
+
+/* 
+###################
+###################
+------- main2-inner
+###################
+################### */
+.main .main2 {
+  background-image: url(../images/2.jpg);
+  max-width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.main .main2 .main2-inner {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 250px 0;
+  margin: 0 300px;
+  display: block;
+}
+
+.main .main2 .main2-inner strong {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 60px;
+  width: 100%;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.main .main2 .main2-inner em {
+  font-size: 18px;
+  padding-left: 70px;
+  text-align: left;
+  display: block;
+  position: relative;
+}
+
+.main .main2 .main2-inner .box2 {
+  width: 1200px;
+  height: 90px;
+  display: block;
+  cursor: pointer;
+}
+
+.main .main2 .main2-inner .box2 a {
+  width: 238px;
+  height: 45px;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #fff;
+  display: block;
+  text-align: center;
+  line-height: 45px;
+  margin-top: 50px;
+  margin-left: 70px;
+}
+
+.main .main2-inner em::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  border-top: 1px solid white;
+}
+
+.main .main2 .main2-inner .box2 a:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
+}
+
+/* 
+###################
+------- main3-inner
+################### */
+.main .main3 {
+  max-width: 100%;
+  background-image: url(../images/3.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+
+.main .main3 .main3-inner {
+
+  width: 100%;
+  height: 100%;
+}
+
+.main .main3 .main3-inner {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  padding: 250px 0;
+  margin: 0 300px;
+  display: block;
+}
+
+.main .main3 .main3-inner strong {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 60px;
+  width: 100%;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.main .main3 .main3-inner em {
+  font-size: 18px;
+  padding-left: 70px;
+  text-align: left;
+  display: block;
+  position: relative;
+}
+
+.main .main3 .main3-inner .box3 {
+  width: 1200px;
+  height: 90px;
+  display: block;
+  cursor: pointer;
+}
+
+.main .main3 .main3-inner .box3 a {
+  width: 238px;
+  height: 45px;
+  color: #fff;
+  font-size: 14px;
+  border: 1px solid #fff;
+  display: block;
+  text-align: center;
+  line-height: 45px;
+  margin-top: 50px;
+  margin-left: 70px;
+}
+
+.main .main3-inner em::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  width: 50px;
+  height: 50px;
+  border-top: 1px solid white;
+}
+
+.main .main3 .main3-inner .box3 a:hover {
+  background-color: #fff;
+  color: #000;
+  transition: 0.5s;
+}
+
+/* ###############
+##################
+-----------section
+##################
+################## */
+
+.main .section {
+  max-width: 100%;
+  height: 122px;
+  padding: 30px 20px;
+  color: #4b4b4b;
+  text-align: center;
+  background-color: #d8d8d8;
+  font-size: 15px;
+}
+
+/* 
+###################
+###################
+------------ fp-nav
+###################
+################### */
+.fp-nav {
+  top: 400px;
+  right: 0px;
+  position: fixed;
+  width: 260px;
+  height: 200px;
+}
+
+.fp-nav .fp-nav-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%
+}
+
+.fp-nav .fp-nav-wrap ul {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.fp-nav .fp-nav-wrap ul li {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+}
+
+.fp-nav .fp-nav-wrap ul li a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fp-nav .fp-nav-wrap ul li a .fp-only {
+  width: 130px;
+  height: 100%;
+  font-size: 18px;
+  color: #fff;
+  text-align: right;
+}
+
+.fp-nav .fp-nav-wrap ul li a .fp-bar {
+  height: 35px;
+  width: 50px;
+  display: block;
+  border-bottom: 2px solid #a5a5a5;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp1 .fp-bar::before {
+  content: "";
+  top: 14px;
+  left: -50px;
+  /* top: 14px;
+  left: 160px; */
+  width: 27px;
+  height: 43px;
+  background-image: url("../images/HOME란\ 이미지.png");
+  position: absolute;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp1 .fp-bar {
+  position: relative;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp2 .fp-bar::before {
+  content: "";
+  top: 14px;
+  left: -57px;
+  /* top: 14px;
+  left: 155px; */
+  width: 44px;
+  height: 43px;
+  background-image: url("../images/건설사업란\ 이미지.png");
+  position: absolute;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp2 .fp-bar {
+  position: relative;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp3 .fp-bar::before {
+  content: "";
+  top: 14px;
+  left: -55px;
+  /* top: 14px;
+  left: 155px; */
+  width: 35px;
+  height: 43px;
+  background-image: url("../images/건축영상란\ 이미지.png");
+  position: absolute;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp3 .fp-bar {
+  position: relative;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp2 .fp-only {
+  width: 130px;
+  height: 100%;
+  font-size: 18px;
+  color: #fff;
+  text-align: right;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp2:hover .fp-only {
+  opacity: 1;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp3 .fp-only {
+  width: 130px;
+  height: 100%;
+  font-size: 18px;
+  color: #fff;
+  text-align: right;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp2:hover .fp-only {
+  opacity: 1;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp2:hover .fp-bar::before {
+  content: "";
+  top: 14px;
+  left: -57px;
+  /* top: 14px;
+  left: 155px; */
+  width: 44px;
+  height: 43px;
+  background-image: url("../images/건설사업란\ 이미지\(밝은거\).png");
+  transition: 0.5s;
+  position: absolute;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp3:hover .fp-only {
+  opacity: 1;
+}
+
+.fp-nav .fp-nav-wrap ul li .fp3:hover .fp-bar::before {
+  content: "";
+  top: 14px;
+  left: -55px;
+  /* top: 14px;
+  left: 155px; */
+  width: 35px;
+  height: 43px;
+  background-image: url("../images/건축영상란\ 이미지\(밝은거\).png");
+  transition: 0.5s;
+  position: absolute;
+}
+
+/* 
+##################
+##################
+------------tablet
+##################
+##################
+*/
+@media screen and (max-width:1300px) and (min-width:860px) {
+  
+}
+
+/* 
+##################
+##################
+------------mobile
+##################
+##################
+*/
+@media screen and (max-width:860px){
+  
+}
